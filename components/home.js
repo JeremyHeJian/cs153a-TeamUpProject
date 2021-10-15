@@ -5,10 +5,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import AboutScreen from './components/About';
 import PreferenceScreen from './components/Preference';
-import MathQuizScreen from './components/MathQuiz';
 import TeamUpScreen from './components/TeamUp';
-import GameHistoryScreen from './components/GameHistory';
-import Login from './components/login';
+import MathQuiz from './MathQuiz';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,8 +23,8 @@ const MyStack = () => {
         />
         <Stack.Screen name="TeamUp" component={TeamUpScreen} />
         <Stack.Screen name="Preference" component={PreferenceScreen} />
-        <Stack.Screen name="MathQuiz" component={MathQuizScreen} />
-        <Stack.Screen name="GameHistory" component={GameHistoryScreen} />
+        <Stack.Screen name="MathQuiz" component={MathQuiz} />
+        <Stack.Screen name="Pomodoros" component={Pomodoros} />
         <Stack.Screen name="About" component={AboutScreen} />
       </Stack.Navigator>
     </NavigationContainer>
@@ -42,14 +40,14 @@ const HomeScreen = ({navigation}) => {
         onPress={() => navigation.navigate('Preference')}
       />
 
-      {/* <Button
+      <Button
         title="MathQuiz"
         onPress={() => navigation.navigate('MathQuiz')}
-      /> */}
+      />
 
       <Button
-        title="Game History"
-        onPress={() => navigation.navigate('GameHistory')}
+        title="Match History"
+        onPress={() => navigation.navigate('Pomodoros')}
       />
 
       <Button title="About" onPress={() => navigation.navigate('About')} />
